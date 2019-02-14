@@ -3,13 +3,11 @@ function cariMedian(arr) {
     
     var x = arr.length
     var median = Math.floor(arr.length/2)
-    
-    
+
+
     if (x%2 === 1) {
         return (arr[median])
     }
-
-    
 
     if (x%2 === 0) {
         return (arr[median] + arr[median-1])/2;

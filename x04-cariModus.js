@@ -14,7 +14,7 @@ function cariModus(arr) {
         output.push([arr[i], 1])
       }
     }
-    // return output; //sudah oke
+    //return output; //sudah oke
 
     var max = 1;
     for (var k = 0; k < output.length; k++) {

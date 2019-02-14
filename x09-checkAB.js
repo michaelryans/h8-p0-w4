@@ -19,7 +19,9 @@ function checkAB(num) {
 
     if (indexA.length === 0 || indexB.length === 0) {
         return false;
-    } if (indexA.length > 0 && indexB.length > 0) {
+    } 
+    
+    if (indexA.length > 0 && indexB.length > 0) {
         for (var k = 0; k < indexA.length; k++) {
             for (var l = 0; l < indexB.length; l++) {
                 if (Math.abs(indexA[k]-indexB[l]) === 4) {

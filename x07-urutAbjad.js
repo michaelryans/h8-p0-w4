@@ -9,14 +9,15 @@ function urutkanAbjad(str) {
     //return arrayStr;
 
     var counter = 1;
-    for (var j = 0; j < arrayStr.length; j++) {
-        for (var k = 0; k < arrayStr.length - 1; k++) {
+    for (var j = 0; j < arrayStr.length-1; j++) {
+        for (var k = 0; k < arrayStr.length - counter; k++) {
             if (arrayStr[k] > arrayStr[k+1]) {
                 temp = arrayStr[k];
                 arrayStr[k] = arrayStr[k+1];
                 arrayStr[k+1] = temp;
             }
         }
+        counter ++;
     }
     //return arrayStr;
     var output = '';

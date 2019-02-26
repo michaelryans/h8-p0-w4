@@ -3,6 +3,8 @@ function naikAngkot(arrPenumpang) {
     //your code here
     var finalOutput = [];
     var objekOutput = {}; 
+    var naikDari = 0;
+    var turunDari = 0;
 
     for (var i = 0; i < arrPenumpang.length; i++) {
         objekOutput = {};
@@ -10,23 +12,21 @@ function naikAngkot(arrPenumpang) {
         objekOutput['naikDari'] = arrPenumpang[i][1];
         objekOutput['tujuan'] = arrPenumpang[i][2];
 
+        
+
         var flag = false;
-        var counter = 0;
         for (var j = 0; j < rute.length; j++) {
             if (rute[j] === arrPenumpang[i][1]) {
-                flag = true;
+                naikDari = j;
             }
             
             if ( rute[j] === arrPenumpang[i][2]) {
-                flag = false;
+                turunDari = j
             }
 
-            if (flag === true) {
-                counter = counter + 1;
-            }
         }
 
-        objekOutput['bayar'] = counter * 2000;
+        objekOutput['bayar'] = Math.abs(naikDari-turunDari) * 2000;
         finalOutput.push(objekOutput)
        
     }

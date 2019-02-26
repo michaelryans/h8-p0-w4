@@ -7,8 +7,7 @@ function ubahHuruf(kata) {
     for ( i = 0; i < kata.length; i++) {
         for (var j = 0; j< abjad.length - 1; j++) {
             if (kata[i] === abjad[j]) {
-                tem
-                p = temp + abjad[j+1]
+                temp = temp + abjad[j+1]
             } else if (kata[i] === 'z') {
                 temp = temp + 'a';
                 break;
